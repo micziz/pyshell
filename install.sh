@@ -18,7 +18,7 @@ if [ command -v curl >/dev/null 2>&1 ]; then
     exit 1
 fi
 
-curl -sl https://raw.githubusercontent.com/micziz/pyshell/main/pyshell.py -o pyshell.py
+curl -sl https://raw.githubusercontent.com/micziz/pyshell/main/src/pyshell.py -o pyshell.py
 
 echo "pyshell is installed"
 echo "run pyshell with python3 pyshell.py"
