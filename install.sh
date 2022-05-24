@@ -32,14 +32,16 @@ echo "Installing dependencies"
 
 curl -sl https://raw.githubusercontent.com/micziz/pyshell/main/requirements.txt -o requirements.txt
 if [ "$OSTYPE" == "darwin"* ]; then
-    python3 -m pip install -r requirements.txt
+    pip3 install -r requirements.txt
 else
-    python -m pip install -r requirements.txt
+    pip install -r requirements.txt
 fi
 echo "Installing pyshell"
 curl -sl https://raw.githubusercontent.com/micziz/pyshell/main/src/pyshell.py -o pyshell.py
 echo "Building pyshell"
 pyinstaller pyshell.py --onefile --noconsole
+cd dist
+mv pyshell ../
 rm pyshell.py
 echo "pyshell is installed"
 echo "run pyshell with ./pyshell"
