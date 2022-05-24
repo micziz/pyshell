@@ -5,7 +5,7 @@ Pyshell is a shell for Python.
 ## Installation
 
 ```bash
-curl -sL https://raw.githubusercontent.com/micziz/pyshell/master/install.sh | sh
+curl -sL https://raw.githubusercontent.com/micziz/pyshell/main/install.sh | sh
 ```
 
 (requires python and curl)
