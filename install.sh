@@ -41,7 +41,8 @@ curl -sl https://raw.githubusercontent.com/micziz/pyshell/main/src/pyshell.py -o
 echo "Building pyshell"
 pyinstaller pyshell.py --onefile --noconsole
 cd dist
-mv pyshell ../
+mv pyshell ~/
+cd ..
 rm pyshell.py
 echo "pyshell is installed"
 echo "run pyshell with ./pyshell"
