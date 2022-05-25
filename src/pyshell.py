@@ -1,5 +1,6 @@
 from os import system, getcwd, chdir
 from sys import exit
+import sys
 
 while True:
     try:
@@ -11,6 +12,8 @@ while True:
             exit()
         elif pyshellI == "cls":
             system("clear")
+        elif pyshellI == "update":
+            system("curl -sL https://raw.githubusercontent.com/micziz/pyshell/main/install.sh | sh")
         else:
             system(pyshellI)
     except KeyboardInterrupt:
