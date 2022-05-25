@@ -28,11 +28,9 @@ if [ command -v curl >/dev/null 2>&1 ]; then
     exit 1
 fi
 
-echo "Installing dependencies"
-
 echo "Installing pyshell"
 curl -sl https://raw.githubusercontent.com/micziz/pyshell/main/src/pyshell.py -o pyshell.py
 echo "Pyshell installed"
 echo "Copy this command into your ./bashrc or ./bash_prfile or ./zshrc"
-echo "alias pyshell='python3 pyshell.py'"
+echo "alias pyshell='python3 $HOME/pyshell.py'"
 

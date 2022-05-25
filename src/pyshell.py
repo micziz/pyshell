@@ -8,7 +8,9 @@ while True:
         if "cd" in pyshellI:
             chdir(f"{pyshellI.split()[1]}")
         elif "logout" in pyshellI: 
-            system("$SHELL")
+            exit()
+        elif pyshellI == "cls":
+            system("clear")
         else:
             system(pyshellI)
     except KeyboardInterrupt:
