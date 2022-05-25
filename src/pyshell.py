@@ -1,7 +1,8 @@
 from os import system, getcwd, chdir
 from sys import exit
 
-while True:
+
+def main():
     try:
         cwd = getcwd()
         pyshellI = input(f"pyshell {cwd}> ")
@@ -12,10 +13,13 @@ while True:
         elif pyshellI == "cls":
             system("clear")
         elif pyshellI == "update":
-            system("curl -sL https://raw.githubusercontent.com/micziz/pyshell/main/install.sh | sh")
+                system("curl -sL https://raw.githubusercontent.com/micziz/pyshell/main/install.sh | sh")
         else:
             system(pyshellI)
     except KeyboardInterrupt:
         exit()
     except:
         print("There was an error. Please try again.")
+
+while True:
+    main()
