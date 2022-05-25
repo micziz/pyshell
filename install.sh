@@ -30,21 +30,9 @@ fi
 
 echo "Installing dependencies"
 
-curl -sl https://raw.githubusercontent.com/micziz/pyshell/main/requirements.txt -o requirements.txt
-if [ "$OSTYPE" == "darwin"* ]; then
-    pip3 install -r requirements.txt
-else
-    pip install -r requirements.txt
-fi
 echo "Installing pyshell"
 curl -sl https://raw.githubusercontent.com/micziz/pyshell/main/src/pyshell.py -o pyshell.py
-echo "Building pyshell"
-pyinstaller pyshell.py --onefile --noconsole
-cd dist
-mv pyshell ~/
-cd ..
-rm pyshell.py
-echo "pyshell is installed"
-echo "run pyshell with ./pyshell"
-
+echo "Pyshell installed"
+echo "Copy this command into your ./bashrc or ./bash_prfile or ./zshrc"
+echo "alias pyshell='python3 pyshell.py'"
 
