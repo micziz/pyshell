@@ -1,6 +1,5 @@
 from os import system, getcwd, chdir
 from sys import exit
-import sys
 
 while True:
     try:
